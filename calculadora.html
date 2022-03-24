@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Calculadora utilizando Switch</h1>
+    <input type="number" name="txtn1" id="txtn1">
+    <!--<input type="text" name="txtop" id="txtop">!-->
+    <select name="txtop" id="txtop">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="/">/</option>
+    <option value="*">*</option>
+    </select>
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Calcular" onclick="calcular()">
+    <div id="resultado">Resultado</div>
+
+
+
+    <script>
+        function calcular() {
+            var tn1 = window.document.getElementById('txtn1')
+
+            var n1 = Number(tn1.value)
+
+            var top = window.document.getElementById('txtop')
+
+            var op = top.value
+
+            var tn2 = window.document.getElementById('txtn2')
+
+            var n2 = Number(tn2.value)
+
+            var res = window.document.getElementById('resultado')
+
+            var result
+
+
+            switch (op) {
+                case '+':
+                    result = n1 + n2
+                    break
+
+                case '-':
+                    result = n1 - n2
+                    break
+
+                case '*':
+                    result = n1 * n2
+                    break
+
+                case '/':
+                    result = n1 / n2
+                    break
+
+            }
+
+            res.innerHTML = result
+        }
+    </script>
+</body>
+
+</html>
