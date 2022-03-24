@@ -1,2 +1,1 @@
-# Estudos-Javascript
- 
+# Exercícios usando JavaScript
